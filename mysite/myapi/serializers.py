@@ -5,4 +5,4 @@ from .models import ImagePost
 class ImagePostSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = ImagePost
-        fields = ('id', 'caption', 'likes')
+        fields = ('id', 'caption', 'likes', 'dislikes', 'author')
