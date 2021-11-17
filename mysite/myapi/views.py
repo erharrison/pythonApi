@@ -5,5 +5,5 @@ from .models import Image
 
 
 class ImageViewSet(viewsets.ModelViewSet):
-    queryset = Image.objects.all().order_by('likes')
+    queryset = Image.objects.all().order_by('id')
     serializer_class = ImageSerializer

@@ -4,7 +4,7 @@ from . import views
 
 
 router = routers.DefaultRouter()
-router.register('images', views.ImageViewSet)
+router.register('image', views.ImageViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
