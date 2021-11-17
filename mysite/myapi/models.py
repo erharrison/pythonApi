@@ -2,7 +2,13 @@ from django.db import models
 
 
 class Image(models.Model):
-    caption = models.CharField(max_length=100)
+    image = models.ImageField()
+    caption = models.TextField(max_length=100)
+    likes = models.IntegerField()
+
+
+class User(models.Model):
+    follow = models.BooleanField()
 
 
 def __str__(self):
