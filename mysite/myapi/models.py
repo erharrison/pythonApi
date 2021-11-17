@@ -18,18 +18,5 @@ class ImagePost(models.Model):
     dislikes = models.IntegerField(default=0)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    def __str__(self):
-        return self.caption
-
-
-class Preference(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    post = models.ForeignKey(ImagePost, on_delete=models.CASCADE)
-    value = models.IntegerField(default=0)
-    date = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return str(self.user) + ':' + str(self.post) + ':' + str(self.value)
-
-    class Meta:
-        unique_together = ("user", "post", "value")
+def __str__(self):
+    return self.name
