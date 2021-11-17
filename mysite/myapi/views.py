@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .serializers import ImageSerializer
-from .models import Image
+from .serializers import ImagePostSerializer
+from .models import ImagePost
 
 
-class ImageViewSet(viewsets.ModelViewSet):
-    queryset = Image.objects.all().order_by('id')
-    serializer_class = ImageSerializer
+class ImagePostViewSet(viewsets.ModelViewSet):
+    queryset = ImagePost.objects.all().order_by('id')
+    serializer_class = ImagePostSerializer
